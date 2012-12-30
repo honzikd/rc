@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+<p>Sidebar in registration_form.html</p>
+<p>Něco o tom, která políčka je nutno vyplnit, a proč.</p>
+<h2>Třeba:</h2>
+<p>Políčka označená * jsou povinná.</p>
+<p>Shromážděné osobní údaje nebudou předány třetí osobě a slouží pouze pro účely společnosti Rent-Card.com - pro další informace navštivte stránku <a href="">Podmínky</a></p>
+{% endblock %}
+
+{% block content %}
+
+<table>
+    <form method='post' action=''>{% csrf_token %}
+        {{ form }}
+        <tr><td></td><td><input type="submit" value="Send activation email" /></td>
+    </form>
+</table>
+
+{% endblock %}

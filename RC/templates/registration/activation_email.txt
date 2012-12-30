@@ -1,0 +1,15 @@
+Dobrý den, 
+
+Vy (nebo někdo kdo se za Vás vydává) požádal o vytvoření uživatelského účtu na stránkách {{ site.name }}. Pokud registrace nebyla provedena Vámi, prosím, ignorujte tuto zprávu. 
+
+Pro aktivaci účtu klikněte na následující odkaz: 
+
+http://{{site.domain}}/accounts/activate/{{ activation_key }}
+
+Pokud nebude aktivace účtu provedena v průběhu následujících {{ expiration_days }}, Váš účet bude automaticky vymazán.
+
+
+
+S pozdravem, 
+
+{{ site.name }}

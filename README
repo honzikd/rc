@@ -1,0 +1,13 @@
+by honzikd
+
+
+README
+
+The rent-card project has been created as Django powered website - as a simple
+web page, that will be used to sell some product, which will earn money for its
+users.
+
+ABOUT DJANGO
+
+I've used Django 1.4 together with Python 2.6 shipped with Apple Mac OS X 10.6.8.
+For more details see comments in the source files.

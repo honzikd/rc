@@ -1,0 +1,54 @@
+<!DOCTYPE html><html> 
+<head>	
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" media="screen" />
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin-ext' rel='stylesheet' type='text/css'>
+
+	<title>{% block title %}rent-card.com{% endblock %}</title> 
+</head>
+
+<body> 
+
+
+
+<div id="main">
+	
+	<div id="main-nav">
+	<ul>
+	<li><a href="/about">O nás</a></li>
+	
+	{% if user.is_authenticated %}
+	<li><a href=/accounts/profile/>Profil</a></li>
+	{% endif %}	
+	
+	<li><a>Podmínky</a></li>
+	<li><a href="/accounts/login/">Přihlášení</a></li>
+	<li><a href="/">Domů</a></li>
+	</ul>
+	</div>
+
+	<div id="login-control">
+	{% if user.is_authenticated  and user.is_active %}
+		<p>Uživatel: <a href="/accounts/profile/"> {{ user.get_full_name }}</a></p>
+	{% else %}
+		<p>Uživatel: <a href="/accounts/login/">nepřihlášen</a></p>
+	{% endif %}
+	</div>
+
+	<div id="sidebar">	{% block sidebar %} 	{% endblock %} 
+	</div>	
+	<div id="content"> 
+	{% block content %}
+	{% endblock %}
+	</div>
+
+	
+	<div id="footer">
+	Powered by <a href="http://www.djangoproject.cz/" title="Django Project">Django</a> | honzikd | <a href="/admin/">admin login</a>
+	</div>
+
+</div>
+
+</body>
+</html>
