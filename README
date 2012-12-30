@@ -3,11 +3,15 @@ by honzikd
 
 README
 
-The rent-card project has been created as Django powered website - as a simple
-web page, that will be used to sell some product, which will earn money for its
-users.
+Currently, the project is in alpha-stage - the website runs pretty flawlessly on 
+the testing server.
 
 ABOUT DJANGO
 
 I've used Django 1.4 together with Python 2.6 shipped with Apple Mac OS X 10.6.8.
+
+Right now, I'm finding most interesting the creation of new user directly in the
+registration process, using the django-registration app and signals.
+Thanks to dmitko: http://dmitko.ru/django-registration-form-custom-field/ 
+
 For more details see comments in the source files.
